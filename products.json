@@ -1,16 +1,16 @@
 [
   {
     "id": 1,
-    "nama": "Produk Pertama",
-    "harga": "Rp50.000",
-    "gambar": "images/produk1.jpg",
-    "wa": "628123456789"
+    "nama": "Anti Respirant Deodorant Kahf 45ml",
+    "harga": "Rp35.000",
+    "gambar": "images/kahf.jpg",
+    "wa": "6285794859861"
   },
   {
     "id": 2,
-    "nama": "Anti Respirant Deodorant Kahf 45ml",
+    "nama": "Ant Respirant Deodorant Kahf 45ml",
     "harga": "Rp35.000",
     "gambar": "images/produk2.jpg",
-    "wa": "628123456789"
+    "wa": "6285794859861"
   }
 ]
