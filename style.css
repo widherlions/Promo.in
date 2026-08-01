@@ -22,8 +22,8 @@ border:none;
 }
 
 .logo{
-    width:80px;
-    height:80px;
+    width:150px;
+    height:auto;
     display:block;
     margin:0 auto 10px;
 }
