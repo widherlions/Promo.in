@@ -14,19 +14,20 @@ header{
 }
 
 header input{
-width:100%;
-padding:10px;
-margin-top:10px;
-border-radius:8px;
-border:none;
+    width:100%;
+    max-width:400px;
+    padding:12px;
+    margin-top:10px;
+    border-radius:10px;
+    border:none;
+    box-sizing:border-box;
 }
 
 .logo{
-    width: 140px;
-    height: 140px;
-    object-fit: contain;
-    display: block;
-    margin: 10px auto;
+    width:180px;
+    height:auto;
+    display:block;
+    margin:10px auto;
 }
 
 header h1{
@@ -66,9 +67,10 @@ padding:15px;
 }
 
 .card p{
-padding:0 10px;
-color:red;
-font-weight:bold;
+    padding:0 10px 10px;
+    color:#e60023;
+    font-weight:bold;
+    font-size:18px;
 }
 
 .card a{
@@ -81,8 +83,9 @@ font-weight:bold;
     margin:10px;
     border-radius:10px;
     font-weight:bold;
+    transition:background .2s;
 }
 
-.card a:active{
-    transform:scale(.98);
+.card a:hover{
+    background:#1da851;
 }
