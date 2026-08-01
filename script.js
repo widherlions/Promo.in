@@ -13,9 +13,15 @@ function tampilkan(data){
 let html="";
 
 data.forEach(item=>{
+  let diskon = Math.round(
+  ((item.hargaAsli - item.hargaPromo) / item.hargaAsli) * 100
+);
   console.log(item);
 html += `
 <div class="card">
+<div class="badge-diskon">-${diskon}%</div>
+
+<img src="${item.gambar}" alt="${item.nama}">
   <img src="${item.gambar}" alt="${item.nama}">
 <h3>${item.nama}</h3>
 
