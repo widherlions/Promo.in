@@ -1,5 +1,7 @@
 let semuaProduk=[];
-
+function rupiah(angka){
+  return "Rp" + angka.toLocaleString("id-ID");
+}
 fetch("products.json")
 .then(res=>res.json())
 .then(data=>{
@@ -18,8 +20,8 @@ html += `
 <h3>${item.nama}</h3>
 
 <div class="harga">
-  <span class="harga-asli">${item.hargaAsli}</span>
-  <span class="harga-promo">${item.hargaPromo}</span>
+  <span class="harga-asli">${rupiah(item.hargaAsli)}</span>
+  <span class="harga-promo">${rupiah(item.hargaPromo)}</span>
 </div>
 
   <div class="aksi">
