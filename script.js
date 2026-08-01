@@ -19,11 +19,10 @@ data.forEach(item=>{
   console.log(item);
 html += `
 <div class="card">
-<div class="badge-diskon">-${diskon}%</div>
+  <div class="badge-diskon">-${diskon}%</div>
 
-<img src="${item.gambar}" alt="${item.nama}">
   <img src="${item.gambar}" alt="${item.nama}">
-<h3>${item.nama}</h3>
+  <h3>${item.nama}</h3>
 
 <div class="harga">
   <span class="harga-asli">${rupiah(item.hargaAsli)}</span>
