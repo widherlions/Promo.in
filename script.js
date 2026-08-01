@@ -11,6 +11,7 @@ function tampilkan(data){
 let html="";
 
 data.forEach(item=>{
+  console.log(item);
 html += `
 <div class="card">
   <img src="${item.gambar}" alt="${item.nama}">
