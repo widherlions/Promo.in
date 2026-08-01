@@ -16,8 +16,7 @@ html+=`
 <img src="${item.gambar}">
 <h3>${item.nama}</h3>
 <p>${item.harga}</p>
-<a href="https://wa.me/${item.wa}?text=Saya ingin membeli ${encodeURIComponent(item.nama)}">Beli via WhatsApp</a>
-</div>
+<a href="https://wa.me/${item.wa}?text=${encodeURIComponent('Halo, saya ingin membeli ' + item.nama)}" target="_blank">Beli via WhatsApp</a>
 `;
 });
 
