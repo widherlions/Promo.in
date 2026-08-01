@@ -35,7 +35,7 @@ html += `
 Saya ingin membeli:
 
 📦 Produk: ${item.nama}
-💰 Harga Promo: ${item.hargaPromo}
+💰 Harga Promo: ${rupiah(item.hargaPromo)}
 
 Mohon informasi ketersediaannya.
 Terima kasih.`
