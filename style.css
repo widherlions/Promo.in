@@ -22,10 +22,11 @@ border:none;
 }
 
 .logo{
-    width:150px;
-    height:auto;
-    display:block;
-    margin:0 auto;
+    width: 140px;
+    height: 140px;
+    object-fit: contain;
+    display: block;
+    margin: 10px auto;
 }
 
 header h1{
