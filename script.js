@@ -16,7 +16,17 @@ html+=`
 <img src="${item.gambar}">
 <h3>${item.nama}</h3>
 <p>${item.harga}</p>
-<a href="https://wa.me/${item.wa}?text=${encodeURIComponent('Halo, saya ingin membeli ' + item.nama)}" target="_blank">Beli via WhatsApp</a>
+<a href="https://wa.me/${item.wa}?text=${encodeURIComponent(
+`Halo Admin 👋
+
+Saya ingin membeli:
+
+📦 Produk: ${item.nama}
+💰 Harga: ${item.harga}
+
+Mohon informasi ketersediaannya.
+Terima kasih.`
+)}" target="_blank">Beli via WhatsApp</a>
 `;
 });
 
