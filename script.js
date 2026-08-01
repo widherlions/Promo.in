@@ -27,6 +27,7 @@ Saya ingin membeli:
 Mohon informasi ketersediaannya.
 Terima kasih.`
 )}" target="_blank">Beli via WhatsApp</a>
+</div>
 `;
 });
 
