@@ -14,8 +14,12 @@ data.forEach(item=>{
 html += `
 <div class="card">
   <img src="${item.gambar}" alt="${item.nama}">
-  <h3>${item.nama}</h3>
-  <p>${item.harga}</p>
+<h3>${item.nama}</h3>
+
+<div class="harga">
+  <span class="harga-asli">${item.hargaAsli}</span>
+  <span class="harga-promo">${item.hargaPromo}</span>
+</div>
 
   <div class="aksi">
     <button onclick="tambahKeranjang(${item.id})">
