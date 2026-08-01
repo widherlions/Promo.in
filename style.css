@@ -89,3 +89,13 @@ padding:15px;
 .card a:hover{
     background:#1da851;
 }
+
+.banner{
+    margin-top:15px;
+    background:linear-gradient(90deg,#ff9800,#ff5722);
+    color:white;
+    padding:15px;
+    border-radius:12px;
+    font-weight:bold;
+    text-align:center;
+}
