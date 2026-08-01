@@ -1,15 +1,17 @@
 [
   {
     "id": 1,
-    "nama": "Anti respirant Deodorant Kahf 45ml",
-    "harga": "Rp27.000",
-    "gambar": "images/kahf2.jpg",
+    "nama": "Anti Respirant Deodorant Kahf 45ml",
+    "hargaAsli": "Rp37.000",
+    "hargaPromo": "Rp27.000",
+    "gambar": "images/kahf.jpg",
     "wa": "6285794859861"
   },
   {
     "id": 2,
-    "nama": "Anti perpirant Deodorant Kahf 45ml",
-    "harga": "Rp25.000",
+    "nama": "Anti Respirant Deodorant Kahf 45ml",
+    "hargaAsli": "Rp30.000",
+    "hargaPromo": "Rp25.000",
     "gambar": "images/kahf.jpg",
     "wa": "6285794859861"
   }
