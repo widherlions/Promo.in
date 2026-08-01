@@ -123,3 +123,21 @@ padding:15px;
 .aksi button:hover{
     background: #0b5ed7;
 }
+
+.harga{
+    padding: 0 10px 10px;
+}
+
+.harga-asli{
+    display:block;
+    color:#888;
+    text-decoration:line-through;
+    font-size:15px;
+}
+
+.harga-promo{
+    display:block;
+    color:#e60023;
+    font-size:28px;
+    font-weight:bold;
+}
