@@ -11,11 +11,18 @@ function tampilkan(data){
 let html="";
 
 data.forEach(item=>{
-html+=`
-<div class="aksi">
-<button onclick="tambahKeranjang(${item.id})">🛒 Tambah ke Keranjang</button>
+html += `
+<div class="card">
+  <img src="${item.gambar}" alt="${item.nama}">
+  <h3>${item.nama}</h3>
+  <p>${item.harga}</p>
 
-<a href="https://wa.me/${item.wa}?text=${encodeURIComponent(
+  <div class="aksi">
+    <button onclick="tambahKeranjang(${item.id})">
+      🛒 Tambah ke Keranjang
+    </button>
+
+    <a href="https://wa.me/${item.wa}?text=${encodeURIComponent(
 `Halo Admin 👋
 
 Saya ingin membeli:
@@ -25,8 +32,10 @@ Saya ingin membeli:
 
 Mohon informasi ketersediaannya.
 Terima kasih.`
-)}" target="_blank">Beli via WhatsApp</a>
-
+)}" target="_blank">
+      Beli via WhatsApp
+    </a>
+  </div>
 </div>
 `;
 });
