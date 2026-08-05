@@ -67,10 +67,6 @@ tampilkan(hasil);
 
 let keranjang = JSON.parse(localStorage.getItem("keranjang")) || [];
 
-function simpanKeranjang() {
-  localStorage.setItem("keranjang", JSON.stringify(keranjang));
-}
-
 function tambahKeranjang(id) {
   const produk = semuaProduk.find(p => p.id === id);
 
@@ -88,14 +84,10 @@ function tambahKeranjang(id) {
   simpanKeranjang();
   updateKeranjang();
 
-  // Jika popup sedang terbuka, refresh isinya
   if (document.getElementById("modalKeranjang").style.display === "block") {
     bukaKeranjang();
   }
-}
 
-  simpanKeranjang();
-  updateKeranjang();
   alert("Produk ditambahkan ke keranjang.");
 }
 
