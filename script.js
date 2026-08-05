@@ -67,6 +67,8 @@ tampilkan(hasil);
 
 let keranjang = JSON.parse(localStorage.getItem("keranjang")) || [];
 
+updateKeranjang();
+
 function tambahKeranjang(id) {
   const produk = semuaProduk.find(p => p.id == id);
 
