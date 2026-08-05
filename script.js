@@ -124,3 +124,10 @@ function kosongkanKeranjang() {
   localStorage.removeItem("keranjang");
   updateKeranjang();
 }
+
+function kosongkanKeranjang() {
+  keranjang = [];
+  localStorage.removeItem("keranjang");
+  updateKeranjang();
+  alert("Keranjang berhasil dikosongkan.");
+}
