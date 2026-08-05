@@ -194,3 +194,17 @@ margin-bottom:15px;
 .btn-keranjang:hover{
 background:#e68900;
 }
+
+.btn-hapus{
+background:#dc3545;
+color:white;
+border:none;
+padding:10px 18px;
+border-radius:20px;
+cursor:pointer;
+margin-left:10px;
+}
+
+.btn-hapus:hover{
+background:#b02a37;
+}
