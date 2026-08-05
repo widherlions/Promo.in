@@ -67,6 +67,10 @@ tampilkan(hasil);
 
 let keranjang = JSON.parse(localStorage.getItem("keranjang")) || [];
 
+function simpanKeranjang() {
+  localStorage.setItem("keranjang", JSON.stringify(keranjang));
+}
+
 updateKeranjang();
 
 function tambahKeranjang(id) {
@@ -98,14 +102,11 @@ function tambahKeranjang(id) {
   }
 }
 
-  alert("Produk ditambahkan ke keranjang.");
-}
-
 function updateKeranjang() {
   let total = 0;
 
   keranjang.forEach(item => {
-    total += item.jumlah;
+    total += Number(item.jumlah);
   });
 
   document.getElementById("jumlahKeranjang").textContent = total;
