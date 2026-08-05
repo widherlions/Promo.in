@@ -124,8 +124,26 @@ function kosongkanKeranjang() {
   alert("Keranjang berhasil dikosongkan.");
 }
 
-function bukaKeranjang(){
-  document.getElementById("modalKeranjang").style.display="block";
+function bukaKeranjang() {
+  let html = "";
+  let total = 0;
+
+  keranjang.forEach(item => {
+    html += `
+      <p>${item.nama} x${item.jumlah} - ${rupiah(item.hargaPromo * item.jumlah)}</p>
+    `;
+
+    total += item.hargaPromo * item.jumlah;
+  });
+
+  if (keranjang.length === 0) {
+    html = "<p>Keranjang masih kosong.</p>";
+  }
+
+  document.getElementById("isiKeranjang").innerHTML = html;
+  document.getElementById("totalHarga").textContent = rupiah(total);
+
+  document.getElementById("modalKeranjang").style.display = "block";
 }
 
 function tutupKeranjang(){
