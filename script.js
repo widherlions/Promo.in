@@ -114,7 +114,13 @@ function checkoutWA() {
 
   pesan += `%0A💰 Total: Rp${total.toLocaleString("id-ID")}`;
 
-  window.open(`https://wa.me/62XXXXXXXXXX?text=${pesan}`);
+  window.open(`https://wa.me/6285794859861?text=${pesan}`);
 }
 
 localStorage.removeItem("keranjang");
+
+function kosongkanKeranjang() {
+  keranjang = [];
+  localStorage.removeItem("keranjang");
+  updateKeranjang();
+}
