@@ -74,3 +74,9 @@ function tambahKeranjang(id){
 
   alert(`${produk.nama} berhasil ditambahkan ke keranjang.`);
 }
+
+let keranjang = JSON.parse(localStorage.getItem("keranjang")) || [];
+
+function simpanKeranjang() {
+  localStorage.setItem("keranjang", JSON.stringify(keranjang));
+}
