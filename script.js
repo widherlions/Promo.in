@@ -117,14 +117,6 @@ function checkoutWA() {
   window.open(`https://wa.me/6285794859861?text=${pesan}`);
 }
 
-localStorage.removeItem("keranjang");
-
-function kosongkanKeranjang() {
-  keranjang = [];
-  localStorage.removeItem("keranjang");
-  updateKeranjang();
-}
-
 function kosongkanKeranjang() {
   keranjang = [];
   localStorage.removeItem("keranjang");
