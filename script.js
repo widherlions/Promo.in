@@ -116,3 +116,5 @@ function checkoutWA() {
 
   window.open(`https://wa.me/62XXXXXXXXXX?text=${pesan}`);
 }
+
+localStorage.removeItem("keranjang");
