@@ -80,3 +80,49 @@ let keranjang = JSON.parse(localStorage.getItem("keranjang")) || [];
 function simpanKeranjang() {
   localStorage.setItem("keranjang", JSON.stringify(keranjang));
 }
+
+function tambahKeranjang(id) {
+  const produk = semuaProduk.find(p => p.id === id);
+
+  const ada = keranjang.find(p => p.id === id);
+
+  if (ada) {
+    ada.jumlah++;
+  } else {
+    keranjang.push({
+      ...produk,
+      jumlah: 1
+    });
+  }
+
+  simpanKeranjang();
+  updateKeranjang();
+  alert("Produk ditambahkan ke keranjang.");
+}
+
+function updateKeranjang() {
+  let total = 0;
+
+  keranjang.forEach(item => {
+    total += item.jumlah;
+  });
+
+  document.getElementById("jumlahKeranjang").textContent = total;
+}
+
+updateKeranjang();
+
+function checkoutWA() {
+  let pesan = "Halo Admin 👋%0A%0ASaya ingin memesan:%0A";
+
+  let total = 0;
+
+  keranjang.forEach(item => {
+    pesan += `• ${item.nama} x${item.jumlah} = Rp${(item.hargaPromo * item.jumlah).toLocaleString("id-ID")}%0A`;
+    total += item.hargaPromo * item.jumlah;
+  });
+
+  pesan += `%0A💰 Total: Rp${total.toLocaleString("id-ID")}`;
+
+  window.open(`https://wa.me/62XXXXXXXXXX?text=${pesan}`);
+}
