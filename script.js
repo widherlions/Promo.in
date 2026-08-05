@@ -180,11 +180,6 @@ function kurangJumlah(id) {
   bukaKeranjang();
 }
 
-  simpanKeranjang();
-  updateKeranjang();
-  bukaKeranjang();
-}
-
 function hapusProduk(id) {
   keranjang = keranjang.filter(p => p.id !== id);
 
