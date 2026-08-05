@@ -130,7 +130,21 @@ function bukaKeranjang() {
 
   keranjang.forEach(item => {
     html += `
-      <p>${item.nama} x${item.jumlah} - ${rupiah(item.hargaPromo * item.jumlah)}</p>
+      <div class="item-keranjang">
+        <b>${item.nama}</b><br>
+
+        <button onclick="kurangJumlah(${item.id})">➖</button>
+
+        <span>${item.jumlah}</span>
+
+        <button onclick="tambahKeranjang(${item.id})">➕</button>
+
+        <button onclick="hapusProduk(${item.id})">🗑️</button>
+
+        <br>
+        ${rupiah(item.hargaPromo * item.jumlah)}
+        <hr>
+      </div>
     `;
 
     total += item.hargaPromo * item.jumlah;
@@ -142,10 +156,31 @@ function bukaKeranjang() {
 
   document.getElementById("isiKeranjang").innerHTML = html;
   document.getElementById("totalHarga").textContent = rupiah(total);
-
   document.getElementById("modalKeranjang").style.display = "block";
 }
 
 function tutupKeranjang(){
   document.getElementById("modalKeranjang").style.display="none";
 }
+
+function kurangJumlah(id) {
+  const produk = keranjang.find(p => p.id === id);
+
+  if (produk.jumlah > 1) {
+    produk.jumlah--;
+  } else {
+    keranjang = keranjang.filter(p => p.id !== id);
+  }
+
+  simpanKeranjang();
+  updateKeranjang();
+  bukaKeranjang();
+}
+
+function hapusProduk(id) {
+  keranjang = keranjang.filter(p => p.id !== id);
+
+  simpanKeranjang();
+  updateKeranjang();
+  bukaKeranjang();
+    }
