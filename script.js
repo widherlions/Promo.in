@@ -131,3 +131,11 @@ function kosongkanKeranjang() {
   updateKeranjang();
   alert("Keranjang berhasil dikosongkan.");
 }
+
+function bukaKeranjang(){
+  document.getElementById("modalKeranjang").style.display="block";
+}
+
+function tutupKeranjang(){
+  document.getElementById("modalKeranjang").style.display="none";
+}
