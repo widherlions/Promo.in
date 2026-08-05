@@ -87,6 +87,15 @@ function tambahKeranjang(id) {
 
   simpanKeranjang();
   updateKeranjang();
+
+  // Jika popup sedang terbuka, refresh isinya
+  if (document.getElementById("modalKeranjang").style.display === "block") {
+    bukaKeranjang();
+  }
+}
+
+  simpanKeranjang();
+  updateKeranjang();
   alert("Produk ditambahkan ke keranjang.");
 }
 
@@ -166,11 +175,18 @@ function tutupKeranjang(){
 function kurangJumlah(id) {
   const produk = keranjang.find(p => p.id === id);
 
+  if (!produk) return;
+
   if (produk.jumlah > 1) {
     produk.jumlah--;
   } else {
     keranjang = keranjang.filter(p => p.id !== id);
   }
+
+  simpanKeranjang();
+  updateKeranjang();
+  bukaKeranjang();
+}
 
   simpanKeranjang();
   updateKeranjang();
