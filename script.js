@@ -65,16 +65,6 @@ item.nama.toLowerCase().includes(cari)
 tampilkan(hasil);
 });
 
-let keranjang = [];
-
-function tambahKeranjang(id){
-  const produk = semuaProduk.find(item => item.id === id);
-
-  keranjang.push(produk);
-
-  alert(`${produk.nama} berhasil ditambahkan ke keranjang.`);
-}
-
 let keranjang = JSON.parse(localStorage.getItem("keranjang")) || [];
 
 function simpanKeranjang() {
