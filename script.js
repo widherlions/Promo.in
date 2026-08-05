@@ -68,9 +68,14 @@ tampilkan(hasil);
 let keranjang = JSON.parse(localStorage.getItem("keranjang")) || [];
 
 function tambahKeranjang(id) {
-  const produk = semuaProduk.find(p => p.id === id);
+  const produk = semuaProduk.find(p => p.id == id);
 
-  const ada = keranjang.find(p => p.id === id);
+  if (!produk) {
+    alert("Produk tidak ditemukan!");
+    return;
+  }
+
+  const ada = keranjang.find(p => p.id == id);
 
   if (ada) {
     ada.jumlah++;
@@ -84,9 +89,12 @@ function tambahKeranjang(id) {
   simpanKeranjang();
   updateKeranjang();
 
+  alert("Produk berhasil ditambahkan ke keranjang.");
+
   if (document.getElementById("modalKeranjang").style.display === "block") {
     bukaKeranjang();
   }
+}
 
   alert("Produk ditambahkan ke keranjang.");
 }
